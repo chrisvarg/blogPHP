@@ -47,7 +47,7 @@ body {
 }
 
 .header-logo a {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', Helvetica;
     font-size: 40px;
     letter-spacing: 2px;
     color: #2979CD;
@@ -90,4 +90,117 @@ body {
 
 .nav-menu__items:hover{
     background: linear-gradient(to bottom, #f2f2f2 0px, #dad9d4 100%);
+}
+
+.site-main {
+    font-size: 1.6rem;
+    width: 85vw;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* SIDEBAR */
+
+.main-sidebar {
+    float: right;
+    width: 27%;
+    height: auto;
+}
+
+.block-aside {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .3),0 3px 7px rgba(0, 0, 0, .3), 0 0 1px #FFFFFF inset, 0 -3px 2px rgba(0, 0, 0, .25) inset;
+}
+
+.block-aside h3 {
+    margin-bottom: 15px;
+}
+
+label, 
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="button"], 
+input[type="submit"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: block;
+    border-radius: 2px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    padding: 7px;
+}
+
+/* PRINCIPAL */
+.main-principal {
+    float: left;
+    width: 70%;
+    min-height: 59.5rem;
+    background: white;
+    border-radius: .5rem;
+    box-shadow: 0 0 .5rem #ccc;
+    margin-left: 20px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.main-principal a{
+        color: #333;
+}
+
+.main-principal h1 {
+    font-size: 32px;
+    color: #444;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #ccc;
+    font-family: 'Fjalla One', Helvetica;
+}
+
+.main-principal h2 {
+    font-size: 2rem;
+    color: #2979CD;
+    text-shadow: 1px 1px 2px #ccc;
+    letter-spacing: 1px;
+    font-family: 'Fjalla One', Helvetica;
+    margin-top: 25px;
+}
+
+.main-principal p {
+    margin-top: 8px;
+}
+
+
+.view-all a{
+    display: block;
+    border-radius: 2px;
+    padding: 15px;
+    color: white;
+    background: #007ee5;
+    border: 1px solid #156785;
+    cursor: pointer;
+    width: 18rem;
+    margin: 0 auto;
+    margin-top: 5rem;
 }

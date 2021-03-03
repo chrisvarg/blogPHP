@@ -13,8 +13,42 @@
     </head>
     <body>
         <!-- HEADER -->
-        <!-- MENU -->
-
+        <header class="site-header">
+            <!-- LOGO -->
+            <div class="header-logo">
+                <a href="index.php">
+                    Blog de Videojuegos
+                </a>
+            </div>
+            <!-- MENU -->
+            <nav class="header-nav">
+                <ul class="nav-menu">
+                    <li class="nav-menu__items">
+                        <a href="index.php">Inicio</a>
+                    </li>
+                    <li class="nav-menu__items">
+                        <a href="index.php">Categoria 1</a>
+                    </li>
+                    <li class="nav-menu__items">
+                        <a href="index.php">Categoria 2</a>
+                    </li>
+                    <li class="nav-menu__items">
+                        <a href="index.php">Categoria 3</a>
+                    </li>
+                    <li class="nav-menu__items">
+                        <a href="index.php">Categoria 4</a>
+                    </li>
+                    <li class="nav-menu__items">
+                        <a href="index.php">Sobre mi</a>
+                    </li>
+                    <li class="nav-menu__items">
+                        <a href="index.php">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+        </header>
+        <!-- MAIN -->
         <main class="site-main">
             <aside class="main-sidebar">
                 <div id="login" class="sidebar-login block-aside">
@@ -52,63 +86,45 @@
             <div class="main-principal">
                 <h1>Ultimas entradas</h1>
                 <article class="entreds">
-                    <h2>Titulo de mi entrada</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illo laboriosam ipsam nobis voluptatem velemolestiae officiis doloremque molestias distinctio! Aut, animi.
-                    </p>
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illo laboriosam ipsam nobis voluptatem velemolestiae officiis doloremque molestias distinctio! Aut, animi.
+                            </p>
+                    </a>
                 </article>
                 <article class="entreds">
-                    <h2>Titulo de mi entrada</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illo laboriosam ipsam nobis voluptatem velemolestiae officiis doloremque molestias distinctio! Aut, animi.
-                    </p>
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illo laboriosam ipsam nobis voluptatem velemolestiae officiis doloremque molestias distinctio! Aut, animi.
+                            </p>
+                    </a>
                 </article>
                 <article class="entreds">
-                    <h2>Titulo de mi entrada</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illo laboriosam ipsam nobis voluptatem velemolestiae officiis doloremque molestias distinctio! Aut, animi.
-                    </p>
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illo laboriosam ipsam nobis voluptatem velemolestiae officiis doloremque molestias distinctio! Aut, animi.
+                            </p>
+                    </a>
                 </article>
+                <article class="entreds">
+                    <a href="">
+                        <h2>Titulo de mi entrada</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius illo laboriosam ipsam nobis voluptatem velemolestiae officiis doloremque molestias distinctio! Aut, animi.
+                            </p>
+                    </a>
+                </article>
+                <div class="view-all">
+                    <a href="">Ver todas las entradas</a>
+                </div> <!-- FIN MAIN --->
             </div>
+            <div class="clearfix"></div>
         </main>
 
-        <header class="site-header">
-            <!-- LOGO -->
-            <div class="header-logo">
-                <a href="index.php">
-                    Blog de Videojuegos
-                </a>
-            </div>
-            <!-- MENU -->
-            <nav class="header-nav">
-                <ul class="nav-menu">
-                    <li class="nav-menu__items">
-                        <a href="index.php">Inicio</a>
-                    </li>
-                    <li class="nav-menu__items">
-                        <a href="index.php">Categoria 1</a>
-                    </li>
-                    <li class="nav-menu__items">
-                        <a href="index.php">Categoria 2</a>
-                    </li>
-                    <li class="nav-menu__items">
-                        <a href="index.php">Categoria 3</a>
-                    </li>
-                    <li class="nav-menu__items">
-                        <a href="index.php">Categoria 4</a>
-                    </li>
-                    <li class="nav-menu__items">
-                        <a href="index.php">Sobre mi</a>
-                    </li>
-                    <li class="nav-menu__items">
-                        <a href="index.php">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="clearfix"></div>
-        </header>
         <!-- SIDERBAR -->
-        <!-- MAIN -->
         <!-- FOOTER -->
     </body>
 </html>
