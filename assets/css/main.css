@@ -29,6 +29,20 @@ body {
     background: url('../img/cubes.png') #f4f4f4;
 }
 
+.alerta {
+    padding: 5px;
+    font-size: 1.4rem;
+    color: white;
+    background-color: green;
+    box-shadow: 0px 1px 3px #ccc;
+    margin-bottom: 15px;
+    border-radius: 2px;
+}
+
+.alerta-error {
+    background-color: red;
+}
+
 /* HEADER */
 
 .site-header {
@@ -196,7 +210,7 @@ input[type="submit"] {
 .view-all a{
     display: block;
     border-radius: 2px;
-    padding: 15px;
+    padding: 9px;
     color: white;
     background: #007ee5;
     border: 1px solid #156785;
