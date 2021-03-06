@@ -182,6 +182,12 @@ input[type="submit"],
     border-color: green;
 }
 
+
+.botton-red {
+    background-color: red;
+    border-color: #444;
+}
+
 /* PRINCIPAL */
 .main-principal {
     float: left;

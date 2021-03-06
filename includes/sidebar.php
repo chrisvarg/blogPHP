@@ -8,8 +8,9 @@
             <h3>Bienvenido, <?= $_SESSION['usuario']['nombre']. ' '.$_SESSION['usuario']['apellidos']; ?></h3>
             <!-- botones -->
             <a href="cerrar.php" class="botton botton-green">Crear entradas</a>
+            <a href="cerrar.php" class="botton">Crear categoria</a>
             <a href="cerrar.php" class="botton botton-orange">Mis datos</a>
-            <a href="cerrar.php" class="botton">Cerrrar Sesión</a>
+            <a href="cerrar.php" class="botton botton-red">Cerrrar Sesión</a>
         </div>
     <?php endif; ?>
 
