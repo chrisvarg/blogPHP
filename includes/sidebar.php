@@ -6,12 +6,23 @@
     <?php if(isset($_SESSION['usuario'])): ?>
         <div id="usuario-logueado" class="sidebar-login block-aside">
             <h3>Bienvenido, <?= $_SESSION['usuario']['nombre']. ' '.$_SESSION['usuario']['apellidos']; ?></h3>
-            <?php var_dump($_SESSION['usuario']); ?>
+            <!-- botones -->
+            <a href="cerrar.php" class="botton botton-green">Crear entradas</a>
+            <a href="cerrar.php" class="botton botton-orange">Mis datos</a>
+            <a href="cerrar.php" class="botton">Cerrrar Sesión</a>
         </div>
     <?php endif; ?>
 
     <div id="login" class="sidebar-login block-aside">
         <h3>Identificate</h3>
+
+        <!-- MOSTRAR ERRORES DE LOGIN -->
+        <?php if(isset($_SESSION['error_login'])): ?>
+            <div class="alerta alerta-error">
+                <?= $_SESSION['error_login']; ?>
+            </div>
+        <?php endif; ?>
+
         <form action="login.php" method="POST">
             <label for="email">Email</label>
             <input type="email" name="email"/>

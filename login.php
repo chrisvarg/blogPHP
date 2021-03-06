@@ -4,6 +4,13 @@ require_once 'includes/conexion.php';
 
 // RECOGER LOS DATOS DEL FORMULARIO
 if(isseT($_POST)){
+
+    // Borrar error antiguo
+    if(isset($_SESSION['error_login'])){
+        session_unset($_SESSION['error_login']);
+    }
+
+    // RECOJO DATOS DEL FORMULARIO
     $email = trim($_POST['email']);
     $password = $_POST['password'];
 
@@ -20,10 +27,6 @@ if(isseT($_POST)){
         if($verify) {
             // UTILIZAR UN SESSION PARA GUARDAR LOS DATOS DEL USUARIO LOGEADO
             $_SESSION['usuario'] = $usuario;
-
-            if(isset($_SESSION['error_login'])){
-                session_unset($_SESSION['error_login']);
-            }
 
         }else {
             // SI ALGO FALLA ENVIAR UNA SESION CON EL FALLO
