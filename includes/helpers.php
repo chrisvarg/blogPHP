@@ -39,3 +39,21 @@ function conseguirCategorias($conexion) {
     return $result;
 
 }
+
+    function conseguirUltimasEntradas($conexion) {
+
+        // TENER CUIDADO CON LOS ESPACIOS EN LAS QUERYS
+        $sql = "SELECT e.*, c.* FROM entradas e ".
+        "INNER JOIN categorias c ON e.categoria_id = c.id ".
+        "ORDER BY e.id DESC LIMIT 4";
+        
+        $entradas = mysqli_query($conexion, $sql);
+        
+        $result = array();
+        if($entradas && mysqli_num_rows($entradas) >= 1) {
+            $result = $entradas;
+        }
+
+        return $entradas;
+    }
+
