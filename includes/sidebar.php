@@ -13,6 +13,9 @@
         </div>
     <?php endif; ?>
 
+    
+    <?php //IF NOS CONDICIONA SI LA USUARIO NO EXISTE MOSTRAR
+    if(isset($_SESSION['usuario']) == false): ?>
     <div id="login" class="sidebar-login block-aside">
         <h3>Identificate</h3>
 
@@ -72,4 +75,5 @@
         </form>
         <?php borrarErrores(); ?>
     </div>
+    <?php endif; ?>
 </aside>

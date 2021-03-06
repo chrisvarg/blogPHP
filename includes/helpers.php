@@ -43,7 +43,7 @@ function conseguirCategorias($conexion) {
     function conseguirUltimasEntradas($conexion) {
 
         // TENER CUIDADO CON LOS ESPACIOS EN LAS QUERYS
-        $sql = "SELECT e.*, c.* FROM entradas e ".
+        $sql = "SELECT e.*, c.nombre AS 'categoria' FROM entradas e ".
         "INNER JOIN categorias c ON e.categoria_id = c.id ".
         "ORDER BY e.id DESC LIMIT 4";
         

@@ -43,6 +43,12 @@ body {
     background-color: red;
 }
 
+.fecha {
+    color: #4e4e4e;
+    margin-top: .5rem;
+    font-size: 1.4rem;
+}
+
 /* HEADER */
 
 .site-header {
