@@ -1,6 +1,15 @@
 <?php require_once 'includes/helpers.php'; ?>
 
 <aside class="main-sidebar">
+
+    <!-- motrar el usuario logeado -->
+    <?php if(isset($_SESSION['usuario'])): ?>
+        <div id="usuario-logueado" class="sidebar-login block-aside">
+            <h3>Bienvenido, <?= $_SESSION['usuario']['nombre']. ' '.$_SESSION['usuario']['apellidos']; ?></h3>
+            <?php var_dump($_SESSION['usuario']); ?>
+        </div>
+    <?php endif; ?>
+
     <div id="login" class="sidebar-login block-aside">
         <h3>Identificate</h3>
         <form action="login.php" method="POST">
