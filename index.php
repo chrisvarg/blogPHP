@@ -7,6 +7,7 @@
 <!-- PRINCIPAL -->
 <div class="main-principal">
     <h1>Ultimas entradas</h1>
+    
     <?php
         $entradas = conseguirUltimasEntradas($db);
         if(empty($entradas) == false):
