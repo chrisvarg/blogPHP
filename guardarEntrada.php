@@ -26,10 +26,12 @@ if(isset($_POST)){
     if(count($errores) == 0){
         $sql = "INSERT INTO entradas VALUES(NULL, $usuario, $categoria, '$titulo', '$descripcion', CURDATE());";
         $guardar = mysqli_query($db, $sql);
+        
+        header('Location: index.php');
 
     }else {
         $_SESSION['erroresEntrada'] = $errores;
+        header('Location: crearEntradas.php');
     }
 }
 
-header('Location: index.php');
