@@ -6,10 +6,10 @@
 
 <!-- PRINCIPAL -->
 <div class="main-principal">
-    <h1>Ultimas entradas</h1>
+    <h1>Todas las entradas</h1>
     
     <?php
-        $entradas = conseguirEntradas($db, true);
+        $entradas = conseguirEntradas($db);
         if(empty($entradas) == false):
             while ($entrada = mysqli_fetch_assoc($entradas)):
     ?>    
@@ -27,10 +27,6 @@
         endif;
     ?>
     
-
-    <div class="view-all">
-        <a href="entradas.php">Ver todas las entradas</a>
-    </div> <!-- FIN MAIN --->
-</div> <!-- END FOOTER -->
+</div><!-- FIN MAIN --->
 
 <?php require_once 'includes/footer.php';?>
