@@ -20,7 +20,7 @@
     <a href="categoria.php?id=<?=$entradaActual['categoria_id']?>">
         <h2><?=$entradaActual['categoria']?></h2>
     </a>
-    <h4><?=$entradaActual['fecha']?> | <?=$entradaActual['usuario_id']?></h4>
+    <h4><?=$entradaActual['fecha']?> | <?=$entradaActual['usuario']?></h4>
     <p>
         <?=$entradaActual['descripcion']?>
     </p>
@@ -28,7 +28,7 @@
     <?php if(isset($_SESSION['usuario']) && $_SESSION['usuario']['id'] == $entradaActual['usuario_id']): ?>
         <br />
         <a href="editarEntrada.php" class="botton botton-green">Editar entrada</a>
-        <a href="borrarEntrada.php" class="botton">Eliminar entrada</a>
+        <a href="borrarEntrada.php?id=<?=$entradaActual['id']?>" class="botton">Eliminar entrada</a>
     <?php endif; ?>
 </div><!-- FIN MAIN --->
 
