@@ -176,6 +176,7 @@ input[type="submit"],
 }
 
 .botton {
+    color: white !important;
     text-align: center;
     width: 130px;
 }
@@ -187,7 +188,6 @@ input[type="submit"],
     background: #21b921;
     border-color: green;
 }
-
 
 .botton-red {
     background-color: red;
