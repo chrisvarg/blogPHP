@@ -54,27 +54,37 @@ if(isset($_POST)){
     if(count($errores) == 0){
         $usuario = $_SESSION['usuario'];
         $guardarUsuario = true;
-
-        //ACTUALIZAR EL USUARIO EN LA TABLA DE USUSARIOS DE LA BBDD
-        $sql = "UPDATE usuarios SET ".
-               "nombre = '$nombre', ".
-               "apellidos = '$apellidos', ".
-               "email = '$email' ".
-               "WHERE id = ". $usuario['id'];
-
-        $guardar = mysqli_query($db, $sql);
-
-        if($guardar){
-            $_SESSION['usuario']['nombre'] = $nombre;
-            $_SESSION['usuario']['apellidos'] = $apellidos;
-            $_SESSION['usuario']['email'] = $email;
-            
-            $_SESSION['completado'] = 'Tus datos se han actualizado con éxito';
-        }else {
-            
-            $_SESSION['errores']['general'] = 'Fallo al guardar el actualizar de tus datos!!' ;
-        }
         
+
+        // COMPROBAR SI EL EMAIL YA EXISTE
+        $sql = "SELECT id, email FROM usuarios WHERE email  = '$email'";
+        $issetEmail = mysqli_query($db, $sql);
+        $issetUsuario = mysqli_fetch_assoc($issetEmail);
+
+        if($issetUsuario['id'] == $usuario['id'] || empty($issetUsuario)){
+            //ACTUALIZAR EL USUARIO EN LA TABLA DE USUSARIOS DE LA BBDD
+            $sql = "UPDATE usuarios SET ".
+                "nombre = '$nombre', ".
+                "apellidos = '$apellidos', ".
+                "email = '$email' ".
+                "WHERE id = ". $usuario['id'];
+
+            $guardar = mysqli_query($db, $sql);
+
+            if($guardar){
+                $_SESSION['usuario']['nombre'] = $nombre;
+                $_SESSION['usuario']['apellidos'] = $apellidos;
+                $_SESSION['usuario']['email'] = $email;
+                
+                $_SESSION['completado'] = 'Tus datos se han actualizado con éxito';
+            }else {
+                
+                $_SESSION['errores']['general'] = 'Fallo al guardar el actualizar de tus datos!!' ;
+            }
+        }else {
+            $_SESSION['errores']['general'] = "El usuario ya existe!!";
+        }
+
     }else {
         $_SESSION['errores'] = $errores;
     }
