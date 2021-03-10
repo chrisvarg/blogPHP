@@ -7,7 +7,7 @@ function mostrarError($errores, $campo) {
     }
 
     return $alerta;
-};
+}
 
 function borrarErrores() {
     $borrado = false;
@@ -33,7 +33,6 @@ function borrarErrores() {
     return $borrado;
 }
 
-
 function conseguirCategorias($conexion) {
     $sql = "SELECT * FROM categorias ORDER BY id ASC";
     $categorias = mysqli_query($conexion, $sql);
@@ -58,7 +57,6 @@ function conseguirCategoria($conexion, $id) {
     return $result;
 }
 
-
 function conseguirEntrada($conexion, $id) {
     $sql = "SELECT e.*, c.nombre AS 'categoria', CONCAT(u.nombre, ' ', u.apellidos) AS usuario "
          . "FROM entradas e ".
@@ -76,15 +74,18 @@ function conseguirEntrada($conexion, $id) {
 }
 
 
-
-function conseguirEntradas($conexion, $limit = null, $categoria = null) {
+function conseguirEntradas($conexion, $limit = null, $categoria = null, $busqueda = null) {
 
     // TENER CUIDADO CON LOS ESPACIOS EN LAS QUERYS
     $sql = "SELECT e.*, c.nombre AS 'categoria' FROM entradas e ".
-    "INNER JOIN categorias c ON e.categoria_id = c.id ";
+           "INNER JOIN categorias c ON e.categoria_id = c.id ";
 
     if(empty($categoria) == false) {
         $sql .= "WHERE e.categoria_id = $categoria ";
+    }
+
+    if(empty($busqueda) == false) {
+        $sql .= "WHERE e.titulo LIKE '%$busqueda%' ";
     }
     
     $sql .= "ORDER BY e.id DESC ";

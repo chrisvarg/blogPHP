@@ -1,6 +1,15 @@
 
 <aside class="main-sidebar">
 
+    <div id="buscador" class="sidebar-login block-aside">
+            <h3>Buscar</h3>
+
+            <!-- MOSTRAR ERRORES DE LOGIN -->
+            <form action="buscar.php" method="POST">
+                <input type="text" name="busqueda"/>                            
+                <input type="submit" value="Buscar"/>
+            </form>
+    </div>
     <!-- motrar el usuario logeado -->
     <?php if(isset($_SESSION['usuario'])): ?>
         <div id="usuario-logueado" class="sidebar-login block-aside">
