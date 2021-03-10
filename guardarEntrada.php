@@ -24,14 +24,30 @@ if(isset($_POST)){
 
     //INSERTAR ENTRADA EN LA TABLA DE ENTRADAS DE LA BBDD
     if(count($errores) == 0){
-        $sql = "INSERT INTO entradas VALUES(NULL, $usuario, $categoria, '$titulo', '$descripcion', CURDATE());";
+        if(isset($_GET['editar'])){
+            
+            $entradaId = $_GET['editar'];
+            $usuarioId = $_SESSION['usuario']['id'];
+            $sql = "UPDATE entradas SET titulo='$titulo', descripcion='$descripcion', categoria_id=$categoria ".
+                   " WHERE id= $entradaId AND usuario_id = $usuarioId ";
+
+        }else {
+            $sql = "INSERT INTO entradas VALUES(NULL, $usuario, $categoria, '$titulo', '$descripcion', CURDATE());";
+        }
+
         $guardar = mysqli_query($db, $sql);
-        
+
         header('Location: index.php');
 
     }else {
+        
         $_SESSION['erroresEntrada'] = $errores;
-        header('Location: crearEntradas.php');
+
+        if(isset($_GET['editar'])){
+            header("Location: editarEntrada.php?id=". $_GET['editar']);
+        }else {
+            header('Location: crearEntradas.php');
+        }
     }
 }
 
